@@ -1,0 +1,28 @@
+.head{
+    text-align:center;
+    font-family: 'Pridi', serif;
+    color: rgb(75, 75, 75);
+}
+.box{
+    background: rgb(228, 229, 230);
+    margin-top: 40px;
+    border-radius: 10px;
+    padding: 20px;
+}
+.nextbtn{
+    width: 100px;
+    margin: auto;
+    display: block;
+}
+.build{
+    margin-top: 40px;
+    font-size: 80px;
+    font-family: 'Sriracha', cursive;
+    color: rgb(61, 47, 255);
+    font-weight: bolder;
+    margin-left: 50px;
+}
+label{
+    font-family: 'Pridi', serif;
+    font-size: 16px;
+}
