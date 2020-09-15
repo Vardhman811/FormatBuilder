@@ -9,11 +9,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
 {% endblock %}
 {% block body %} 
+{% if request.method == "POST" %}
+    <script>
+      window.location.href = '/education';
+    </script>
+{% endif %}
 <div class="build">BUILD  YOUR  RESUME</div>
-<div class="box container" id="box">
+<div class="box container" id="box2">
 <div class="heading">
   <h2 class="head">Tell us about yourself</h2>
-<form method="POST" action="/">{% csrf_token %} 
+<form method="POST" action="/heading">{% csrf_token %} 
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEmail4">First Name</label>
@@ -58,7 +63,6 @@
   </form>
 </div>
 </div>
-<!-- ############################################# -->
 
 {% endblock %}
 {% block js %} 

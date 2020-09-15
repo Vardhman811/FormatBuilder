@@ -1,0 +1,104 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Build Resume{% endblock %}
+{% block css %} 
+<link rel="stylesheet" href='{% static "css/resume.css" %}' >
+<link href="https://fonts.googleapis.com/css2?family=Pridi&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+{% endblock %}
+{% block body %} 
+<div class="build">BUILD  YOUR  RESUME</div>
+<div class="box container" id="box2">
+  <div class="heading">
+    <h2 class="head">Tell us about your Education</h2>
+  <form method="POST" action="/education">{% csrf_token %} 
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">School Name</label>
+          <input type="text" class="form-control" id="schoolname" name="schoolname" placeholder="School Name" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Loaction</label>
+          <input type="text" class="form-control" id="loaction" name="loaction" placeholder="Loaction" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Percent of last year of school</label>
+          <input type="text" class="form-control" id="spercent" name="spercent" placeholder="Percent of last year of school" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmail4">Year of completion of school</label>
+          <input type="number" class="form-control" id="syear" name="syear" placeholder="Year of completion of school" required>
+        </div>
+      </div>
+      <br>
+      <h5 style="color: red;">Leave the field blank if you do not have done any qualification from below</h5>
+      <label for=""><strong>GRADUTION</strong></label>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="inputEmail4">Course</label>
+          <input type="text" class="form-control" id="ugCourse" name="ugcourse" placeholder="Btech, BE, ..." >
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputPassword4">College</label>
+          <input type="text" class="form-control" id="ugcollege" name="ugcollege" placeholder="College" >
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputEmail4">Passing Year</label>
+          <input type="number" class="form-control" id="ugpass" name="ugpass" placeholder="Passing Year" >
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputPassword4">CGPA/Percent</label>
+          <input type="text" class="form-control" id="ugpercent" name="ugpercent" placeholder="CGPA/Percent" >
+        </div>
+      </div>
+      <label for=""><strong>POST GRADUTION</strong></label>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="inputEmail4">Course</label>
+          <input type="text" class="form-control" id="pgCourse" name="pgcourse" placeholder="Mtech, ME, ..." >
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputPassword4">College</label>
+          <input type="text" class="form-control" id="pgcollege" name="pgcollege" placeholder="College" >
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputEmail4">Passing Year</label>
+          <input type="number" class="form-control" id="pgpass" name="pgpass" placeholder="Passing Year" >
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputPassword4">CGPA/Percent</label>
+          <input type="text" class="form-control" id="pgpercent" name="pgpercent" placeholder="CGPA/Percent" >
+        </div>
+      </div>
+      <label for=""><strong>OTHER</strong></label>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="inputEmail4">Course</label>
+          <input type="text" class="form-control" id="otherCourse" name="othercourse" placeholder="Diploma ..." >
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputPassword4">College</label>
+          <input type="text" class="form-control" id="othercollege" name="othercollege" placeholder="College" >
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputEmail4">Passing Year</label>
+          <input type="number" class="form-control" id="otherpass" name="otherpass" placeholder="Passing Year" >
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputPassword4">CGPA/Percent</label>
+          <input type="text" class="form-control" id="otherpercent" name="otherpercent" placeholder="CGPA/Percent" >
+        </div>
+      </div>
+      
+      <button id='b1' type="submit" class="btn btn-primary nextbtn">Next</button>
+    </form>
+  </div>
+  </div>
+{% endblock %}
+{% block js %} 
+
+{% endblock %}

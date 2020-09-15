@@ -26,3 +26,35 @@ label{
     font-family: 'Pridi', serif;
     font-size: 16px;
 }
+.workbox{
+    width:720px;
+    height: 350px;
+    background-color: rgb(247, 178, 178);
+    display: block;
+    margin: auto;
+    padding: 20px;
+}
+
+.workquestion{
+    font-family: 'Pridi', serif;
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgb(0, 168, 50);
+    text-align: center;
+}
+
+#butt1,#butt2,#butt3,#butt4,#butt5,#butt6,#butt7,#butt8,#butt9,#butt10{
+    width: 105px;
+    font-size: 30px;
+    display: block;
+    font-weight: bolder;
+    padding: 5px;
+    
+}
+
+
+.jobtitle{
+    font-family: 'Pridi', serif;
+    font-style: oblique;
+    text-decoration: underline;
+}
