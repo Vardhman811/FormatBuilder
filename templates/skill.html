@@ -11,7 +11,7 @@
 {% block body %} 
 {% if request.method == "POST" %}
     <script>
-      
+      window.location.href = '/accomplishment';
     </script>
 {% endif %}
 <div class="build">BUILD  YOUR  RESUME</div>
@@ -23,7 +23,7 @@
         <div class="row" id="butt">
           <div class="form-group col-md-2">
               <button type="button" class="btn btn-success" onclick="updateform(1)" id="butt1">1</button>
-          </div>
+          </div> 
           <div class="form-group col-md-2">
               <button type="button" class="btn btn-success" onclick="updateform(2)" id="butt2">2</button>
           </div>

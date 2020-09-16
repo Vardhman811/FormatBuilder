@@ -26,4 +26,6 @@ urlpatterns = [
     path('education',views.education,name="education"),
     path('work',views.work,name="work"),
     path('skill',views.skill,name="skill"),
+    path('accomplishment',views.accomplishment,name="accomplishment"),
+    path('summary',views.summary,name="summary"),
 ]

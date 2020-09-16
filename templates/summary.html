@@ -1,0 +1,37 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Build Resume{% endblock %}
+{% block css %} 
+<link rel="stylesheet" href='{% static "css/resume.css" %}' >
+<link href="https://fonts.googleapis.com/css2?family=Pridi&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+{% endblock %}
+{% block body %} 
+{% if request.method == "POST" %}
+    <script>
+     
+    </script>
+{% endif %}
+<div class="build">BUILD  YOUR  RESUME</div>
+<div class="box container" id="box2">
+<div class="heading">
+  <h2 class="head">PROFESSIONAL SUMMARY</h2>
+<form method="POST" action="/summary">{% csrf_token %} 
+   
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="inputEmail4">Summary</label>
+          <textarea type="text" style="height: 100px;" class="form-control" id="summary" name="summary" placeholder="Write a short summary telling more about yourself, your strengths and experience. " required></textarea>
+        </div>
+      </div>
+      <button id='b1' type="submit" class="btn btn-primary nextbtn">Next</button>
+  </form>
+</div>
+</div>
+
+{% endblock %}
+{% block js %} 
+
+{% endblock %}

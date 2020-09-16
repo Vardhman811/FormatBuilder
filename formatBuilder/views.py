@@ -99,5 +99,21 @@ def skill(request):
                 skill8 = request.POST.get('skill8')
                 skill9 = request.POST.get('skill9')
                 skill10 = request.POST.get('skill10')
-                print(skill1," ",skill6)
         return render(request,'skill.html')
+
+def accomplishment(request):
+        if request.method == "POST":
+                #tell me about your self
+                accomplishment1 = request.POST.get('accomplishment1')
+                description1 = request.POST.get('skill2')
+                accomplishment2 = request.POST.get('accomplishment2')
+                discription2 = request.POST.get('discription2')
+                print(accomplishment1,discription2)
+        return render(request,'accomplishment.html')
+
+def summary(request):
+        if request.method == "POST":
+                #tell me about your self
+                summary = request.POST.get('summary')
+                print(summary)
+        return render(request,'summary.html')

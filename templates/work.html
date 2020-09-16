@@ -9,6 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
 {% endblock %}
 {% block body %} 
+{% if request.method == "POST" %}
+    <script>
+      window.location.href = '/skill';
+    </script>
+{% endif %}
 <div class="build">BUILD  YOUR  RESUME</div>
 <div class="box container" id="box">
   <div class="workbox">
@@ -33,7 +38,7 @@
    
       
       
-      
+       
 </div>
 {% endblock %}
 {% block js %} 

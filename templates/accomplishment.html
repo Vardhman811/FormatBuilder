@@ -1,0 +1,56 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Build Resume{% endblock %}
+{% block css %} 
+<link rel="stylesheet" href='{% static "css/resume.css" %}' >
+<link href="https://fonts.googleapis.com/css2?family=Pridi&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+{% endblock %}
+{% block body %} 
+{% if request.method == "POST" %}
+    <script>
+     window.location.href = '/summary';
+    </script>
+{% endif %}
+<div class="build">BUILD  YOUR  RESUME</div>
+<div class="box container" id="box2">
+<div class="heading">
+  <h2 class="head">Tell us about your Accomplishments</h2>
+<form method="POST" action="/accomplishment">{% csrf_token %} 
+    <div class="form-row">
+      <div class="form-group col-md-5">
+        <label for="inputEmail4">Accomplishment 1</label>
+        <input type="text" class="form-control" id="accomplishment1" name="accomplishment1" placeholder="Accomplishment " required>
+      </div>
+      
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="inputEmail4">Discription</label>
+        <textarea type="text" style="height: 100px;" class="form-control" id="discription1" name="discription1" placeholder="Discription" required></textarea>
+      </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-5">
+          <label for="inputEmail4">Accomplishment 2</label>
+          <input type="text" class="form-control" id="accomplishment2" name="accomplishment2" placeholder="Accomplishment " required>
+        </div>
+        
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="inputEmail4">Discription</label>
+          <textarea type="text" style="height: 100px;" class="form-control" id="discription2" name="discription2" placeholder="Discription" required></textarea>
+        </div>
+      </div>
+      <button id='b1' type="submit" class="btn btn-primary nextbtn">Next</button>
+  </form>
+</div>
+</div>
+
+{% endblock %}
+{% block js %} 
+
+{% endblock %}
