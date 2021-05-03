@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+ <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+<script>
+var mediaQueryList = window.matchMedia('print');
+mediaQueryList.addListener(function(mql) {
+    if (mql.matches) {
+        console.log('onbeforeprint equivalent');
+        while( $('#rgt div').height() > $('#rgt').height() ) {
+        $('#rgt div').css('font-size', (parseInt($('#rgt div').css('font-size')) - 1) + "px" );
+    }
+    } else {
+        console.log('onafterprint equivalent');
+        while( $('#rgt div').height() > $('#rgt').height() ) {
+        $('#rgt div').css('font-size', (parseInt($('#rgt div').css('font-size')) - 1) + "px" );
+    }
+        
+    }
+});
+
+</script>
+ <script>
+  $(function() {
+    while( $('#rgt div').height() >= $('#rgt').height() ) {
+        $('#rgt div').css('font-size', (parseInt($('#rgt div').css('font-size')) - 1) + "px" );
+    }
+});
+</script>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="/static/css/Newresume.css">
+
+  <title>Format Builder</title>
+  <link rel="icon" type="image" href="/static/icon.jpeg" />
+</head>
+<body>
+  <div class="root">
+
+       <div class="left">
+            <h4><b>{{name}}</b></h4>
+            <p>{{profession}}</p>
+            <hr>
+            <small><a href="mailto:{{email}}">{{email}}</a><small></small><br>
+            <a href="tel:62657965123">{{mobileno}}</a><br>
+            <address>{{address}}</address><br>
+            <small>{{linkedin}}</small>
+            <hr>
+            <h3 class="lh">SKILLS</h3>
+            <ul>
+              <li>{{skill1}}</li>
+              <li>{{skill2}}</li>
+              <li>{{skill3}}</li>
+              <li>{{skill4}}</li>
+              <li>{{skill5}}</li>
+            </ul>
+            <hr>
+            <h3 class="lh">EDUCATION</h3>
+            <h4 style="color:pink;">Degree Name/Major</h4>
+            <b><p>{{degree1}}</p></b>
+            <small>{{clgname}}</small><br>
+            <small>{{sy1}}</small>---<small>{{ey1}}</small>
+            <small>{{Uni}}</small>
+
+            <h4 style="color: pink;">Degree Name/Major</h4>
+            <p>{{degree2}}</p>
+            <small>{{clgname2}}</small><br>
+            <small>{{sy2}}</small>---<small>{{ey2}}</small>
+            <small>{{Uni2}}</small>
+            <h5>{{certificate}}</h5>
+            <small>{{organization}}</small>
+            <hr>
+            <h3 class="lh">Award</h3>
+            <p>{{award}}</p>
+            <p>{{awardyear}}</p>
+            </small>
+       </div>
+
+     <div class="right" id="upper">
+        <div id="rgt">
+          <div>
+                <h3> Resume Objective</h3>
+                <hr>
+                <p>{{resumeobjective}}</p>
+                <h3>EXPERIENCE</h3>
+                <hr>
+                <h3>{{position1}}</h3>
+                <small><P>{{orgname1}}<br>{{sd1}}---{{ed1}}</p></small>
+                <p style="margin-left:50px">{{exp1desc}}</p>
+                  <h3>{{position2}}</h3>
+                <small><P>{{orgname2}}<br>{{sd2}}---{{ed2}}</p></small>
+                <p style="margin-left:50px">{{exp2desc}}</p>
+                <h3>{{position3}}</h3>
+                <small><P>{{orgname3}}<br>{{sd3}}---{{ed3}}</p></small>
+                <p style="margin-left:50px">{{exp3desc}}</p>
+
+          </div>
+        </div>
+     </div>
+
+  </div>
+
+</body>
+ <center><div style="margin-bottom: 30px;"><button onclick="window.print()" style="color:white; background-color: crimson; border-radius: 3px; width: 130px; font-family: 'Century Gothic'"><h2 >Print</h2 ></button></div></center>
+</html>

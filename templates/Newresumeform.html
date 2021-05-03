@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Format Builder</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+    <link rel="icon" type="image" href="/static/icon.jpeg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+
+<style>
+ 
+.rooty{
+  width: 1000px;
+  border: 6px solid white;
+  margin: 50px;
+  padding: 20px;
+  align-content: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, #ff6666 96%, #ff0066 136%);
+  color: beige;
+  font-size: 20px;
+
+
+}
+.hello{
+        font-size: 20px;
+        font-family: 'Sriracha', cursive;
+        color: rgb(64, 255, 47);
+        font-weight: bolder;
+        margin-left: 20px;
+    }
+    .email{
+        font-size: 20px;
+        font-family: 'Sriracha', cursive;
+        color: rgb(64, 255, 47);
+        font-weight: bolder;
+        margin-left: 20px;
+    }
+
+.build{
+    margin-top: 40px;
+    font-size: 80px;
+    font-family: century gothic ;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    margin-left: 50px;
+}
+
+
+
+body {
+    background-image: linear-gradient(to bottom right, rgb(0, 255, 213), rgb(234, 0, 255));
+}
+
+.cen {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"><h3>Format Builder</h3></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        
+        
+        
+         
+      </ul>
+      <div  class="form-inline my-2 my-lg-0">
+        {% if mail %}
+        <div class="hello">Hello </div> <div class="email">{{mail}}&nbsp;&nbsp;&nbsp;</div>
+        <form method="GET" action="/logout">
+        <button class="btn btn-outline-danger my-2 my-sm-0"  type="submit"  >Logout</button>
+        </form>
+        {% else %}
+        <button class="btn btn-outline-success my-2 my-sm-0"  type="submit">Sign In</button>
+        <button class="btn btn-outline-success my-2 my-sm-0"  type="submit">Sign Up</button>
+        {% endif %}
+        
+      </div>
+    </div>
+  </nav>
+  <div class="build">Build  Your  Resume</div>
+<form method="post" action="/newresume" enctype="multipart/form-data">{% csrf_token %}
+  <div class="cen">
+    <div class="form-group">
+      <div class="rooty">
+
+            Basic information from here
+
+             <label><h2  class="bold">Basic Information</h2></label>
+             <hr>
+            <div>
+            <label>Name</label><br>
+            <input type="Text"  name="name" class="form-control" placeholder="Enter Name">
+            </div>
+            <br>
+              <div class="form-group">
+            <label>profession</label><br>
+            <input type="Text" name="profession" class="form-control" placeholder="Enter profession">
+                </div>
+                    <br>
+
+              <div class="form-group">
+            <label>Email</label><br>
+            <input type="email" name="email" class="form-control" placeholder="Enter email">
+                </div>
+                    <br>
+
+              <div class="form-group">
+                <label>mobile no</label><br>
+            <input type="number" name="mobile" class="form-control" placeholder="Enter contact no">
+                </div>
+                    <br>
+
+              <div class="form-group">
+            <label>Address</label><br>
+            <input type="Address" name="address" class="form-control" placeholder="Enter add">
+              </div>
+                        <br>
+              <div class="form-group">
+            <label>linkedin profile</label><br>
+            <input type="text" name="linkedin" class="form-control" placeholder="Enter li kedin profile">
+              </div>
+                  <br>
+
+
+              <div class="form-group">
+            <label>Enter Your skills</label><br>
+            <input type="text" name="skill1" class="form-control" placeholder="Enter skill 1">
+              </div>
+                  <br>
+
+              <div class="form-group">
+            <label>Enter Your skills</label><br>
+            <input type="text" name="skill2" class="form-control" placeholder="Enter skill 2">
+              </div>
+                            <br>
+              <div class="form-group">
+            <label>Enter Your skills</label><br>
+            <input type="text" name="skill3" class="form-control" placeholder="Enter skill 3">
+              </div>
+                            <br>
+              <div class="form-group">
+            <label>Enter Your skills</label><br>
+            <input type="text" name="skill4" class="form-control" placeholder="Enter skill 4">
+              </div>
+                           <br>
+              <div class="form-group">
+            <label>Enter Your skills</label><br>
+            <input type="text" name="skill5" class="form-control" placeholder="Enter skill 5">
+              </div>
+                  <br>
+                  <h3>EDUCATION</h3>
+            <div class="form-group">
+            <label>First Degree</label><br>
+            <input type="text" name="degree1" class="form-control" placeholder="Enter degree 1">
+             <label>college name</label><br>
+            <input type="text" name="clg1" class="form-control" placeholder="Enter college name">
+            <br>
+              <h6><label>duration</label><br></h6>
+            start date: <input type="month" style="width:250px;" name="sy1" class="form-control">end year:<input type="month" style="width:250px" name="ey1" class="form-control">
+              <label>University name</label><br>
+            <input type="text" name="uni" class="form-control" placeholder="Enter University name">
+
+
+
+              </div>
+                  <br>
+              <div class="form-group">
+            <label>second Degree Details</label><br>
+            <input type="text" name="degree2" class="form-control" placeholder="Enter degree 2">
+             <label>college name</label><br>
+            <input type="text" name="clg2" class="form-control" placeholder="Enter college name">
+            <br>
+              <h6><label>duration</label><br></h6>
+            start date: <input type="month" style="width:250px;" name="sy2" class="form-control">end year:<input type="month" style="width:250px" name="ey2" class="form-control">
+              <label>University name</label><br>
+            <input type="text" name="uni2" class="form-control" placeholder="Enter University name">
+
+              </div>
+                  <br>
+              <div class="form-group">
+            <label>Certification</label><br>
+            <input type="text" name="certificate" class="form-control" placeholder="Enter certification">
+              <label>organization</label><br>
+            <input type="text" name="cerorg" class="form-control" placeholder="Enter certification organization">
+
+              </div>
+                  <br>
+
+               <div class="form-group">
+            <label>Award</label><br>
+            <input type="text" name="award" class="form-control" placeholder="Enter award">
+            <label>year of awarding</label><br>
+            <input type="text" name="awardyear" class="form-control" placeholder="Enter award year">
+              </div>
+
+                  <div class="form-group">
+            <label>Resume Objective</label><br>
+            <textarea maxlength="300" name="objective" class="form-control" name="objective"></textarea>
+              </div>
+                  <br>
+
+            <div class="form-group">
+           <b> <label>Experience1</label><br></b>
+            organization name:<input type="text" name="org1" class="form-control">
+            Position:<input type="text" name="position1" class="form-control"><br>
+            duration:<br>start date:&nbsp;&nbsp;<input type="date" name="sd1">&nbsp;&nbsp;&nbsp;&nbsp;end date:&nbsp;&nbsp;<input type="date" name="ed1"><br><br>
+            Experience1 Description<textarea  name="exp1des" class="form-control" ></textarea>
+              </div>
+              <br>
+
+
+
+
+
+
+           <div class="form-group">
+           <b> <label>Experience2</label><br></b>
+            organization name:<input type="text" name="org2" class="form-control">
+            Position:<input type="text" name="position2" class="form-control"><br>
+            duration:<br>start date:&nbsp;&nbsp;<input type="date" name="sd2">&nbsp;&nbsp;&nbsp;&nbsp;end date:&nbsp;&nbsp;<input type="date" name="ed2"><br><br>
+            Experience2 Description<textarea name="exp2des" class="form-control" ></textarea>
+              </div>
+              <br>
+                  <br>
+           <div class="form-group">
+           <b> <label>Experience3</label><br></b>
+            organization name:<input type="text" name="org3" class="form-control">
+            Position:<input type="text" name="position3" class="form-control"><br>
+            duration:<br>start date:&nbsp;&nbsp;<input type="date" name="sd3">&nbsp;&nbsp;&nbsp;&nbsp;end date:&nbsp;&nbsp;<input type="date" name="ed3"><br><br>
+            Experience2 Description<textarea  name="exp3des" class="form-control" ></textarea>
+              </div>
+              <br>
+
+                  <br>
+                  <center>
+                  <input style="align-content:center;justify-content:center;margin:20px;width: 130px; padding:10px" class="btn btn-success" type="submit" value="Submit">
+                  </center>
+
+      </div>
+    </div>
+  </div>
+</form>
+<footer class="bg-dark">
+  
+  <div class="row">
+      <div class="col-md-5">
+        <br>
+        <br><br>
+        <div class="brand1 text-primary"><h2>Format Builder</h2></div>
+      </div>
+      <div class="col-md-7">
+        <br>
+        <div class="brand2"><h2>Contact Us</h2></div>
+        <div class="row">
+          <div class="col-md-4">
+            
+          </div>
+          <div class="col-md-8">
+            <ul>
+              <li class="mail">jainv811@gmail.com</li>
+              <li class="mail">rishabhhjain1@gmail.com</li>
+              <li class="mail">rk581190@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+ </div>
+ <div class="copy" >© 2020 Copyright: Format Builder</div>
+ <br>
+</footer>
+<style>
+  .copy{
+    color: bisque;
+    text-align: center;
+  }
+
+.brand1{
+  text-align: center;
+  font-weight: bolder;
+  color: aliceblue;
+  font-size: larger;
+}
+.brand2{
+  text-align: center;
+  font-weight: bolder;
+  color: aliceblue;
+  font-size:xx-small;
+}
+.mail{
+  font-weight: bolder;
+  color: aliceblue;
+  font-size:medium;
+}
+</style>
+</body>
+</html>
+          
+   
+      
+      
+    

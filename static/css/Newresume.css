@@ -1,0 +1,77 @@
+.left{
+  width: 70mm;
+  height: 277mm;
+  background-color: green;
+  font-size: large;
+  margin: 0px;
+  padding: 5px;
+  color: white;
+  font-family: Century gothic;
+  
+  }
+  .lh{
+    color: yellow;
+  }
+.root{
+
+  display: flex;
+  width: auto
+  display: inline;
+  border: 4px solid #6D214F;
+  height: 280mm;
+  padding: 2px;
+  margin: 5mm;
+  font-family: century gothic;
+  background-color: whitesmoke;
+  
+}
+  #rgt{
+  font-size: 20px;
+  height: 270mm;
+  
+}
+.right{
+ 
+  padding-bottom: 10mm;
+  margin: 10mm;
+  height: 270;
+  color: #341f97;
+  
+  
+  
+}
+h3{
+  color: crimson;
+}
+
+@media print {
+body {-webkit-print-color-adjust: exact;}
+button{
+  display:none;
+  
+  
+}
+root{
+  padding-bottom: 2px;
+}
+
+.box {
+        font-family: "Times New Roman";
+        padding: 6px;
+        background-color: crimson;
+        color: white;
+        width: 60px;
+}
+
+/*.right{*/
+/*  font-size: 0.99vh;*/
+  
+
+/*}*/
+}
+@page{
+  margin: 4mm;
+  size: A4;
+}
+
+

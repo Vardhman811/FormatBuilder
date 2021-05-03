@@ -14,14 +14,7 @@
     margin: auto;
     display: block;
 }
-.build{
-    margin-top: 40px;
-    font-size: 80px;
-    font-family: 'Sriracha', cursive;
-    color: rgb(61, 47, 255);
-    font-weight: bolder;
-    margin-left: 50px;
-}
+
 label{
     font-family: 'Pridi', serif;
     font-size: 16px;
@@ -51,6 +44,14 @@ label{
     padding: 5px;
     
 }
+#buttW1,#buttW2,#buttW3,#buttW4{
+    width: 105px;
+    font-size: 30px;
+    display: block;
+    font-weight: bolder;
+    padding: 5px;
+    
+}
 
 
 .jobtitle{
@@ -58,3 +59,8 @@ label{
     font-style: oblique;
     text-decoration: underline;
 }
+
+@media print {
+    body {-webkit-print-color-adjust: exact;}
+    }
+

@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Format Builder</title>
+<link type="text/css" rel="stylesheet" href='{% static "vjtemp/blue/css/blue.css"%} ' />
+<!-- <link type="text/css" rel="stylesheet" href='{% static "vjtemp/blue/css/print.css"%}' /> -->
+
+<link href="css/ie7.css" rel="stylesheet" type="text/css" />
+<link rel="icon" type="image" href="/static/icon.jpeg" />
+<link href="css/ie6.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src='{% static "jvjtemp/blue/js/jquery-1.4.2.min.js"%}'></script>
+<script type="text/javascript" src='{% static "vjtemp/blue/js/jquery.tipsy.js"%}'></script>
+<script type="text/javascript" src='{% static "vjtemp/blue/js/cufon.yui.js"%}'></script>
+<script type="text/javascript" src='{% static "vjtemp/blue/js/scrollTo.js"%}'></script>
+<script type="text/javascript" src='{% static "vjtemp/blue/js/myriad.js"%}'></script>
+<script type="text/javascript" src='{% static "vjtemp/blue/js/jquery.colorbox.js"%}'></script>
+<script type="text/javascript" src='{% static "vjtemp/blue/js/custom.js"%}'></script>
+<script type="text/javascript">
+		Cufon.replace('h1,h2');
+</script>
+</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  <!-- <div class="wrapper-top"></div> -->
+  <div class="wrapper-mid">
+    <!-- Begin Paper -->
+    <div id="paper">
+      <div class="paper-top"></div>
+      <div id="paper-mid">
+        <div class="entry">
+          <!-- Begin Image -->
+          <!-- <img class="portrait" src="images/image.jpg" alt="John Smith" /> -->
+          <!-- End Image -->
+          <!-- Begin Personal Information -->
+          <div class="self">
+            <div class="name" style="
+              width:250px;
+              font-size:32px;
+              color:#1b4491;
+              margin-bottom:3px;
+              clear:both;
+            ">{{fname}} {{lname}}<br><br>
+              <span style="
+              width:250px;
+              font-size:22px;
+              color:#1b4491;
+              margin-bottom:3px;
+              clear:both;
+            ">{{profession}}</span></div>
+            <ul>
+              <li class="ad" >{{city}},{{state}},{{pincode}}</li>
+              <li class="mail">{{email}}</li>
+              <li class="tel">{{phone}}</li>
+            </ul>
+          </div>
+          <!-- End Personal Information -->
+          <!-- Begin Social -->
+          <div class="social">
+            <ul>
+              <li><a class='north' href="#" title="Download .pdf"><img src='{% static "vjtemp/blue/images/icn-save.jpg"%}' alt="Download the pdf version" /></a></li>
+              <li><a class='north' href="javascript:window.print()" title="Print"><img src='{% static "vjtemp/blue/images/icn-print.jpg"%}' alt="" /></a></li>
+            </ul>
+          </div>
+          <!-- End Social -->
+        </div>
+        <!-- Begin 1st Row -->
+        <div class="entry">
+          <h2>OBJECTIVE</h2>
+          <p>{{objective}}</p>
+        </div>
+        <!-- End 1st Row -->
+        <!-- Begin 2nd Row -->
+        <div class="entry">
+          <h2>EDUCATION</h2>
+          <div class="content">
+            <h3>{{start1}} - {{pass1}}</h3><br>
+            <h3>Percent/Cgpa </h3><p>{{percent1}}</p>
+            <p>{{college1}}<br />
+              <em>{{course1}}</em></p><br>
+            
+          </div>
+          <div class="content">
+            <h3>{{start2}} - {{pass2}}</h3><br>
+            <h3>Percent/Cgpa </h3><p>{{percent1}}</p>
+            <p>{{college1}}<br />
+              <em>{{course1}}</em></p><br>
+          </div>
+        </div>
+        <!-- End 2nd Row -->
+        <!-- Begin 3rd Row -->
+        <div class="entry">
+          <h2>EXPERIENCE</h2>
+          <div class="content">
+            <h3>{{workstart1}} - {{workpass1}}</h3>
+            <p>{{company1}}<br />
+              <em>{{work1}}</em></p>
+            <ul class="info">
+              <li>{{workdiscription1}}</li>
+              </ul>
+          </div>
+          <div class="content">
+            <h3>{{workstart2}} - {{workpass2}}</h3>
+            <p>{{company2}}<br />
+              <em>{{work2}}</em></p>
+            <ul class="info">
+              <li>{{workdiscription2}}</li>
+            </ul>
+          </div>
+        </div>
+        <!-- End 3rd Row -->
+        <!-- Begin 4th Row -->
+        <div class="entry">
+          <h2>SKILLS</h2>
+          <div class="content">
+            <ul class="skills">
+              <li>{{skill1}}</li>
+              <li>{{skill2}}</li>
+              <li>{{skill3}}</li>
+              <li>{{skill4}}</li>
+              <li>{{skill5}}</li>
+              <li>{{skill6}}</li>
+              <li>{{skill7}}</li>
+              <li>{{skill8}}</li>
+            </ul>
+          </div>
+        </div>
+        <!-- End 4th Row -->
+         <!-- Begin 5th Row -->
+        
+        <!-- Begin 5th Row -->
+      </div>
+      <div class="clear"></div>
+      <div class="paper-bottom"></div>
+    </div>
+    <!-- End Paper -->
+  </div>
+  <!-- <div class="wrapper-bottom"></div> -->
+</div>
+<div id="message"><a href="#top" id="top-link">Go to Top</a></div>
+<!-- End Wrapper -->
+</body>
+</html>
